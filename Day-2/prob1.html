@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic List Rendering</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Your ItemList component code will go here
+
+    function Gallery({ children }) {
+      return (
+        <div className="gallery">
+          {children}
+        </div>
+      );
+    }
+
+    function Image({ src }) {
+      return (
+        <img src={src} alt="Gallery" className="gallery-image" />
+      );
+    }
+
+    ReactDOM.render(
+      <Gallery>
+        <Image src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" />
+        <Image src="https://img.freepik.com/free-photo/view-spectacular-nature-landscape_23-2150763636.jpg" />
+        <Image src="https://static.vecteezy.com/system/resources/thumbnails/035/120/119/small_2x/ai-generated-majestic-mountain-peak-reflects-in-tranquil-water-nature-beauty-generated-by-ai-photo.jpg" />
+        <Image src="https://png.pngtree.com/thumb_back/fh260/background/20230615/pngtree-landscape-landscape-photo-image_2902263.jpg" />
+        <Image src="https://png.pngtree.com/thumb_back/fh260/background/20230611/pngtree-fairytale-nature-hd-background-image_2887015.jpg" />
+        <Image src="https://static.vecteezy.com/system/resources/thumbnails/039/860/116/small_2x/ai-generated-a-green-tree-in-a-field-with-the-sun-shining-on-it-free-photo.jpg" />
+        <Image src="https://static.vecteezy.com/system/resources/thumbnails/036/184/847/small_2x/ai-generated-nature-landscapes-background-free-photo.jpg" />
+        <Image src="https://img.freepik.com/premium-photo/mountain-range-reflects-tranquil-water-creating-majestic-landscape-generated-by-artificial-intelligence_188544-133408.jpg" />
+        <Image src="https://img.freepik.com/free-photo/nature-beauty-reflected-tranquil-mountain-lake-generative-ai_188544-12625.jpg?size=626&ext=jpg&ga=GA1.1.553209589.1715040000&semt=ais" />
+        <Image src="https://img.freepik.com/free-photo/tranquil-scene-mountain-peak-reflects-serene-water-generated-by-artificial-intelligence_25030-60423.jpg" />
+        <Image src="https://img.freepik.com/premium-photo/tranquil-scene-majestic-mountain-range-winter-wilderness-adventure-generated-by-artificial-intelligence_24911-92472.jpg" />
+      </Gallery>,
+      document.getElementById('root')
+    );
+
+  </script>
+</body>
+</html>
