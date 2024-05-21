@@ -17,7 +17,7 @@ function ScoreKeeper() {
       </button>
       <button
         onClick={() => {
-          setScore(score-5)
+          setScore(score - 5)
         }}
       >
         Decrease by 5

@@ -6,7 +6,7 @@ function ProfileUpdater() {
   const [profile, setProfile] = useState({
     firstName: "",
     lastName: "",
-    phoneNumber: "", // Added phone number field
+    phoneNumber: "1234567891", // Added phone number field
   });
 
   const handleInputChange = (e) => {
